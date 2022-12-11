@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 45
+  controlID: 98
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -353,22 +353,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Tiles/InnerWallTiles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Tiles/InnerWallTiles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\gabri\Documents\github\espace_interactif_hypogee
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec6a0000
-    m_LastClickedID: 27372
-    m_ExpandedIDs: 00000000ec6a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 37.400024}
+    m_SelectedIDs: e46c0000
+    m_LastClickedID: 27876
+    m_ExpandedIDs: 00000000ec6a00007a6c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b4a6fbff
+      m_SelectedIDs: 52def5ff
       m_LastClickedID: 0
       m_ExpandedIDs: 2afbffff786a0000
       m_RenameOverlay:
@@ -841,9 +841,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 45.002712, y: 52.31375, z: -2.099475}
+    m_Target: {x: -15.306456, y: 84.20015, z: -5.861358}
     speed: 2
-    m_Value: {x: 45.002712, y: 52.31375, z: -2.099475}
+    m_Value: {x: -15.306456, y: 84.20015, z: -5.861358}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -893,9 +893,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 142.83032
+    m_Target: 103.252396
     speed: 2
-    m_Value: 142.83032
+    m_Value: 103.252396
   m_Ortho:
     m_Target: 1
     speed: 2

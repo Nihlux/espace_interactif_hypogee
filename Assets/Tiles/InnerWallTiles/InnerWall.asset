@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InnerWall
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 7482667652216324306, guid: d308cd87ca491bf48a67b1f186c4bc7d, type: 3}
-  m_Color: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_Transform:
     e00: 1
     e01: 0
