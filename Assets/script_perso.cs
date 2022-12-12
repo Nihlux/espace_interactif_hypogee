@@ -44,14 +44,14 @@ public class script_perso : MonoBehaviour
             {
             sp.flipX = true;
             }
-        if (Input.GetAxisRaw("Vertical") > 0)
-        {
-            sp.flipY = false;
-        }
-        else if (Input.GetAxisRaw("Vertical") < 0)
-        {
-            sp.flipY = true;
-        }
+        //if (Input.GetAxisRaw("Vertical") > 0)
+        //{
+        //    sp.flipY = false;
+        //}
+        //else if (Input.GetAxisRaw("Vertical") < 0)
+        //{
+        //    sp.flipY = true;
+        //}
 
 
 
