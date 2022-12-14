@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 public class script_perso : MonoBehaviour
 {
-    Rigidbody2D body;
-    public SpriteRenderer sp;
-
-    float horizontal;
-    float vertical;
-    float moveLimiter = 0.7f;
+    public Rigidbody2D body;
+    public Animator animator;
+    Vector2 movement;
    
-    public float runSpeed = 20.0f;
+    
+   
+    public float moveSpeed = 5f;
 
     void Start()
     {
@@ -20,41 +19,18 @@ public class script_perso : MonoBehaviour
     void Update()
     {
         // Gives a value between -1 and 1
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        movement.x = Input.GetAxisRaw("Horizontal"); // -1 is left
+        movement.y = Input.GetAxisRaw("Vertical"); // -1 is down
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+
     }
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
-        {
-            // limit movement speed diagonally, so you move at 70% speed
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
-        }
-
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-
-
-        if (Input.GetAxisRaw("Horizontal") > 0)
-            {
-            sp.flipX = false;
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0)
-            {
-            sp.flipX = true;
-            }
-        //if (Input.GetAxisRaw("Vertical") > 0)
-        //{
-        //    sp.flipY = false;
-        //}
-        //else if (Input.GetAxisRaw("Vertical") < 0)
-        //{
-        //    sp.flipY = true;
-        //}
-
-
-
+        body.MovePosition(body.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
 
