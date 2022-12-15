@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class endGoal : MonoBehaviour
 {
@@ -20,11 +19,17 @@ public class endGoal : MonoBehaviour
     {
         Debug.Log("Button clicked 8 times.");
     }
-    void OnTriggerEnter2D(Collider2D personnage)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         // Print the name of the object that we collided with
         Debug.Log("Collision detected with object: " + personnage.gameObject.name);
-        tableau.SetActive(true);
+        
+        if (collision.tag == "CUBE")
+        {
+            tableau.SetActive(true);
+        }
+
+            
     }
     public void resetScene()
     {

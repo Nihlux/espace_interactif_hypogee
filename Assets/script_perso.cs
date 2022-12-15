@@ -62,7 +62,12 @@ public class script_perso : MonoBehaviour
         //movement.x = Input.GetAxisRaw("Horizontal"); // -1 is left
         //movement.y = Input.GetAxisRaw("Vertical"); // -1 is down
 
-            if (left_right > 15)
+
+            if (left_right < 10 && left_right > -15)
+            {
+                movement_x = 0;
+            }
+            else if (left_right > 10)
             {
                 movement_x = 1;
             }
@@ -71,7 +76,11 @@ public class script_perso : MonoBehaviour
                 movement_x = -1;
             }
 
-            if (top_down > 15)
+            if (top_down < 10 && top_down > -15)
+            {
+                movement_y = 0;
+            }
+            else if(top_down > 10)
             {
                 movement_y = 1;
             }
@@ -82,8 +91,8 @@ public class script_perso : MonoBehaviour
 
         movement = new Vector2(movement_x * moveSpeed, movement_y * moveSpeed);
 
-        animator.SetFloat("Horizontal", -left_right);
-        animator.SetFloat("Vertical", top_down);
+        animator.SetFloat("Horizontal", -movement_x);
+        animator.SetFloat("Vertical", movement_y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
 
